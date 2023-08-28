@@ -1,6 +1,6 @@
 body {
 	background-image: url('styles/img1.jpg');
-	background-size: contain;
+	background-size: cover;
 	overflow: hidden;
 }
 
@@ -19,6 +19,7 @@ body {
 	align-items: center;
 	animation: show 3s 1 forwards;
 	animation-delay: 3s;
+	
 }
 
 #title {
@@ -26,40 +27,33 @@ body {
 	top: 5%;
 	text-align: center;
 	color: white;
+	font-family: "Fantasy", Papyrus;
 	font-size: 60px;
 	animation: change-font-size 3s 1;
 }
 
 .flashcards {
-  	margin: 10px;
+  	display: flex;
+	position: relative;
+	margin: 10px;
 	padding: 10px;
-	font-size: 40px;
+	font-size: 32px;
+	font-family: "Lucida Bright", serif;
 	width: 300px;
 	height: 300px;
-	background-color: black;
+	background-color: blue;
 	border-radius: 5%;
 	color: white;
-	text-align: center;
-}
-
-.btn-turn {
-  position: relative;
-  top: 30%;
-  background-color: white;
-  border-radius: 2%;
-  border: 1px black;
-  color: black;
-  font-size: 24px;
-  padding: 5% 20%;
-}
-
-.btn-turn:hover {
-	background-color: #ADD8E6;
-	cursor: pointer;
+	justify-content: center;
+    align-items: center;
 }
 
 .flashcard1, .flashcard2, .flashcard3, .flashcard4, .flashcard5, .flashcard6, .flashcard7, .flashcard8, .flashcard9 {
 	float: left;
+	position: relative;
+	text-align: center;
+	transition: transform 1.5s;
+	transform-style: preserve-3d;
 }
 
 .flashcard4, .flashcard7 {
@@ -85,4 +79,18 @@ body {
 		visibility: visible;
 		transform: rotate(360deg);
 	}
+}
+
+.front, .back {
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.flashcards:hover {
+	cursor: pointer;
+	transform: rotateY(180deg);
 }
