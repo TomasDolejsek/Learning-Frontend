@@ -19,7 +19,6 @@ body {
 	align-items: center;
 	animation: show 3s 1 forwards;
 	animation-delay: 3s;
-	
 }
 
 #title {
@@ -62,7 +61,7 @@ body {
 
 @keyframes change-font-size {
 	from {
-		font-size: 0px;
+		font-size: 0;
 	}
 	to {
 		font-size: 60px;
