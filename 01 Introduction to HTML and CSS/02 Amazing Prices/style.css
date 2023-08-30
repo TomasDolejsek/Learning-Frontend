@@ -1,21 +1,35 @@
+body {
+  margin: 0;
+}
+
 header {
   display: flex;
   width: 100%;
   height: 5%;
   align-items: center;
-  margin: 0.1em;
 }
 
-.upper-nav {
+header div {
   display: flex;
-  justify-content: right;
+  width: 50%;
+  justify-content: left;
   align-items: center;
-  text-style: bold;
+  padding: 1em;
+}
+
+#nav-brand {
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  width: 50%;
+  justify-content: right;
+  padding: 1em;
 }
 
 .menu-item {
-  margin: 20px;
-  padding: 20px;  
+  padding-right: 3em;
 }
 
 main {
@@ -24,6 +38,7 @@ main {
   height: 90%;
   border-top: solid black 2px;
   border-bottom: solid black 2px;
+  box-sizing: border-box;  
 }
 
 footer div {
@@ -31,14 +46,5 @@ footer div {
   width: 100%;
   height: 5%;
   align-items: center;
-  justify-content: space-between;
-  margin: 0.1em;
-}
-
-header div {
-  display: flex;
-  width: 100%;
-  height: 5%;
-  align-items: center;
-  justify-content: left;
+  justify-content: space-around;
 }
